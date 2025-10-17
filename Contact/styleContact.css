@@ -127,50 +127,66 @@ aside nav a:hover{
 /* Main */
 
 main{
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2rem;
+    margin-top: 1rem;
 }
-
 
 main h2{
-    padding: 2rem;
-    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 4rem;
     color: var(--primary);
 }
 
-main img{
-    width: 95%;
-    max-height: 400px;
-    align-self: center;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2.5rem;
-}
-
-
-.section-text{
-    padding: 2rem;
+form {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 0.8rem;
+    width: 100%;
+    max-width:800px;
+    margin-bottom: 2rem;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.article h3{
-    color: var(--primary);
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
+form input,
+form textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
 }
 
-.article p{
-    text-align: justify;
-    font-size: 1.2rem;
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(34, 109, 104, 0.4);
 }
 
 
+form button {
+    align-self: flex-end;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #1a4f4b;
+    transform: scale(1.05);
+}
 /* footer */
 
 
@@ -221,5 +237,32 @@ footer{
           "header"
           "main"
           "footer";
+  }
+}
+
+
+
+/* pluie fleur fait avec chatgpt */
+
+/* 🌸 Style de base des fleurs */
+.fleur {
+  position: fixed;
+  top: -50px;
+  z-index: 9999;
+  user-select: none;
+  pointer-events: none;
+  animation: fall 10s linear forwards;
+  opacity: 0.8;
+}
+
+/* 🌼 Animation de chute */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
   }
 }

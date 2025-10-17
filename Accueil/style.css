@@ -131,6 +131,7 @@ aside nav a:hover{
 main{
     grid-area: main;
     padding-bottom: 1rem;
+    margin-bottom: 2rem ;
 }
 
 .haut{
@@ -171,6 +172,7 @@ section {
   display: flex;
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-top: 1rem;
 }
 
 .article img {
@@ -202,15 +204,20 @@ section {
 }
 
 .text-button button {
-  align-self: flex-end;
   background-color: var(--primary);
-  color: white;
   border: none;
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
   font-weight: bold;
+  color: white;
   transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.text-button a{
+  text-decoration: none;
+  align-self: flex-end;
+  border-radius: 8px;
 }
 
 .text-button button:hover {
